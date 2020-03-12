@@ -13,7 +13,7 @@ variables:
   buildConfiguration: 'Release'
 - task: PublishTestResults@2
   inputs:
-    arguments: --no-restore
+    arguments: '--no-restore'
     #testRunner: VSTest
     #testResultsFiles: '**/*.trx'  
 

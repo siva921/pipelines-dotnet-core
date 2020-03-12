@@ -11,6 +11,11 @@ pool:
 
 variables:
   buildConfiguration: 'Release'
+- task: PublishTestResults@2
+  inputs:
+    arguments: --no-restore
+    #testRunner: VSTest
+    #testResultsFiles: '**/*.trx'  
 
 steps:
 - script: dotnet build --configuration $(buildConfiguration)

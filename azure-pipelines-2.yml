@@ -24,6 +24,9 @@ steps:
     projectKey: 'pipelines-dotnet-core'
     projectName: 'pipelines-dotnet-core'
 - task: SonarCloudAnalyze@1
+- task: SonarCloudAnalyze@1
+- task: SonarCloudPublish@1
+
 - task: SonarCloudPublish@1
   inputs:
     pollingTimeoutSec: '300'

@@ -16,3 +16,13 @@ steps:
 - script: dotnet build --configuration $(buildConfiguration)
   displayName: 'dotnet build $(buildConfiguration)'
   
+- task: SonarCloudPrepare@1
+  inputs:
+    SonarCloud: 'sonarcloud'
+    organization: 'siva921'
+    scannerMode: 'MSBuild'
+    projectKey: 'pipelines-dotnet-core'
+    projectName: 'pipelines-dotnet-core'
+
+
+
